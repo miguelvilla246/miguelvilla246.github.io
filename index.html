@@ -78,6 +78,44 @@
 #hero p {
   text-shadow: 1px 1px 0 #4e3629a2, -1px 1px 0 #4e3629a2, 1px -1px 0 #4e3629a2, -1px -1px 0 #4e3629a2;
 }
+    @media screen and (max-width: 768px) {
+  header img {
+    height: 80px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #hero h1 {
+    font-size: 2em;
+  }
+
+  #hero p {
+    font-size: 1.2em;
+  }
+
+  form input, form textarea {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 40px 15px;
+}
+
 
   </style>
 </head>
