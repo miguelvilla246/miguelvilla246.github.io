@@ -199,7 +199,7 @@ section {
     max-width: 90%;
     line-height: 1.4;
   }
-  
+
 
   </style>
 </head>
@@ -235,9 +235,11 @@ section {
 
 
         <label> Name:</label><br />
-        <input type="text" name="name" placeholder="Full Name" required size="50"><br />
+        <input type="text" name="name" placeholder="Full Name" required size="50" autocomplete="name"><br />
         <label> Email:</label><br />
-        <input type="email" name="email" placeholder="Email" required size="50"><br />
+        <label> Phone:</label><br />
+        <input type="tel" name="phone" placeholder="Phone Number" required size="50" autocomplete="tel"><br />
+        <input type="email" name="email" placeholder="Email" required size="50" autocomplete="email"><br />
         <label> Message:</label><br />
         <textarea name="message" rows="10" cols="65" placeholder="Your message here..." required></textarea ><br/>
         <button type="submit">Send</button>
