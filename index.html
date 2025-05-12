@@ -73,11 +73,17 @@
   padding: 60px 20px;
   color: white;
 }
-
-#hero h1,
+#hero h1 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 1px 1px 0 #4e3629a2, -1px 1px 0 #4e3629a2, 1px -1px 0 #4e3629a2, -1px -1px 0 #4e3629a2;
+  }
 #hero p {
-  text-shadow: 1px 1px 0 #4e3629a2, -1px 1px 0 #4e3629a2, 1px -1px 0 #4e3629a2, -1px -1px 0 #4e3629a2;
-}
+    font-size: 2em;
+    margin: 0;
+    text-shadow: 1px 1px 0 #4e3629a2, -1px 1px 0 #4e3629a2, 1px -1px 0 #4e3629a2, -1px -1px 0 #4e3629a2;
+  }
+
     @media screen and (max-width: 768px) {
   header img {
     height: 80px;
@@ -88,13 +94,6 @@
     gap: 20px;
   }
 
-  #hero h1 {
-    font-size: 2em;
-  }
-
-  #hero p {
-    font-size: 1.2em;
-  }
 
   form input, form textarea {
     width: 90%;
@@ -118,11 +117,13 @@ section {
 
 #services h2 {
   font-size: 2.3em;
+  margin-bottom: 20px;
 }
 
 
 #services p {
-  font-size: 1.6em;
+  font-size: 1.4em;
+  margin: 8px 0;
 }
 
 #quote {
