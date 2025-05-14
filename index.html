@@ -136,6 +136,32 @@
         margin: 0;
     }
 
+        #gallery {
+  background-color: #fffdf9;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+
 
     #about h2 {
       font-size: 2em;
@@ -231,7 +257,24 @@ footer {
   border-top: 2px solid #f2c0b7;
 
 }
+    .socials {
+  margin-top: 15px;
+}
 
+.socials a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.socials img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
 
 
     @media (max-width: 768px) {
@@ -335,6 +378,16 @@ footer {
     </form>
     </form>
   </section>
+
+  
+  <section id="gallery" class="section" data-aos="fade-up">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="before.jpg" alt="Before Example 1">
+      <img src="after.jpg" alt="After Example">
+    </div>
+  </section>
+  
 
   <section id="about" class="section" data-aos="fade-up">
     <h2>About Us</h2>
