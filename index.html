@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Villa Window Washing</title>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -116,6 +119,7 @@
       border: 1px solid #ccc;
       border-radius: 6px;
     }
+
     #quote textarea {
       width: 90%;
       max-width: 500px;
@@ -125,8 +129,8 @@
     }
 
     #quote h3 {
-      font-size: 1.5em;
-      margin: 0;
+        font-size: 1.5em;
+        margin: 0;
     }
 
 
@@ -154,11 +158,6 @@
       padding: 20px;
       margin-top: 40px;
     }
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Villa Window Washing</title>
-      <link rel="icon" type="image/png" href="bucket3.png">
-
     #locations {
   padding: 60px 20px;
   background-color: #fff9f0;
@@ -170,7 +169,6 @@
     font-size: 2.5em;
   margin-bottom: 20px;
   color: #4e3629;
-  text-align: center;
 }
 
 #locations p {
@@ -196,6 +194,40 @@
   color: #e16860;
   font-weight: bold;
 }
+#services {
+  background-color: #fff3e6;  /* darker beige */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#locations {
+  background-color: #fffdf9;  /* lighter */
+}
+
+#testimonials {
+  background-color: #ffe8dc;  /* slightly darker peach tone */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+}
+
+#quote {
+  background-color: #ffffff;  /* white */
+}
+
+#about {
+  background-color: #fff0eadc;  /* soft coral-tinted light */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+}
+
+footer {
+  background-color: #e16860;  /* bold coral */
+  color: white;
+}
+
+.section {
+  border-top: 2px solid #f2c0b7;
+
+}
 
 
 
@@ -204,7 +236,7 @@
         font-size: 2.5em;
       }
       #hero p {
-      font-size: 1.4em;
+      font-size: 1.1em;
       }
 
       .services {
@@ -219,6 +251,8 @@
 
   </style>
 </head>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <body>
   <header>
     <img src="bucket3.png" alt="Villa Logo" style="height: 100px;">
@@ -231,13 +265,13 @@
     </nav>
   </header>
 
-  <section id="hero">
+  <section id="hero" data-aos="fade-up">
     <h1>Villa Window Washing</h1>
     <p>Your pane is our passion</p>
     <a href="#quote" class="cta-button">Get a Free Quote</a>
   </section>
 
-  <section id="services" class="section">
+  <section id="services" class="section" data-aos="fade-up">
     <h2>Our Services</h2>
     <div class="services">
       <div class="service-box">Residential Window Cleaning</div>
@@ -247,32 +281,33 @@
     </div>
   </section>
 
-    <section id="locations">
+  <section id="locations" data-aos="fade-up">
     <h2>Where We Serve</h2>
     <p><strong>We’re based in East Haven, CT — and proudly serve homes and businesses in, but not limited to:</strong></p>
     <p></p>
-    <ul>
+    <ul style="list-style: none; padding: 0; font-size: 1.2em;">
       <li>• New Haven Country</li>
       <li>• Fairfield County</li>
       <li>• Middlesex County</li>
       <li>• New London County</li>
     </ul>
-       <p style="text-align: center; font-weight: bold; font-size: 1.3em; margin-top: 20px;">
+    <p style="text-align: center; font-weight: bold; font-size: 1.3em; margin-top: 20px;">
         We've got you covered!
       </p>
   </section>
   
 
-  <section id="testimonials" class="section">
+  <section id="testimonials" class="section" data-aos="fade-up">
     <h2>What Our Customers Say</h2>
     <blockquote>“So impressed with the cleaning! Fast, friendly, and affordable.”</blockquote>
+    <blockquote>“My storefront has never looked better. Highly recommend!”</blockquote>
   </section>
 
-  <section id="quote" class="section">
+  <section id="quote" class="section" data-aos="fade-up">
     <h2>Request a Free Quote</h2>
     <h3>By completing the form</h3>
     <h3>or</h3>
-    <h3>Call or Message us directly at (914)712-8172</h3>
+    <h3>Contacting us directly at (914)712-8172</h3>
     <form id="quote-form" action="https://formsubmit.co/c811203dce3b9c7c017baad34286dbd4" method="POST">
       <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
       <input type="email" name="email" placeholder="Email" required autocomplete="email">
@@ -287,7 +322,7 @@
     </form>
   </section>
 
-  <section id="about" class="section">
+  <section id="about" class="section" data-aos="fade-up">
     <h2>About Us</h2>
     <p style="max-width: 700px; margin: 0 auto; text-align: justify;">
         <p> As a small family owned and operated window cleaning company we value each one of our customers. Our approach is to work as if it were for our family at our own home. </p>
@@ -303,5 +338,15 @@
   <footer>
     <p>&copy; 2025 Villa Window Washing LLC | East Haven, CT | info@villawindowwashing.com</p>
   </footer>
+  <script>
+    AOS.init();
+  </script>
+<section id="services" data-aos="fade-up">
+  <!-- AOS Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
