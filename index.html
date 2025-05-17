@@ -148,25 +148,42 @@
      scroll-margin-top: 200px;
     }
 
+    #quote-form input,
+    #quote-form select,
+    #quote-form textarea {
+        display: block;
+        width: 90%;
+        max-width: 500px;
+        margin: 10px auto;
+        padding: 10px 12px;
+        font-size: 1em;
+        font-family: 'Lobster', cursive;
+        color: #4e3629;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #fff;
+        box-sizing: border-box;
+      }
 
-    #quote-form input, #quote-form textarea {
-      display: block;
-      width: 90%;
-      max-width: 500px;
-      margin: 10px auto;
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
+  #quote-form select {
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="black" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 140,0 70,80" /></svg>');
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 12px;
+        padding-right: 30px;
+      }
 
-    #quote textarea {
-      width: 90%;
-      max-width: 500px;
-      padding: 10px;
-      height: 150px; /* ✅ Controls height */
-      font-size: 1em;
-    }
+#quote-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+#quote-form button.cta-button {
+  margin-top: 20px;
+}
+
+  
 
     #quote h3 {
         font-size: 1.5em;
@@ -415,16 +432,39 @@ footer {
     <h3>Contacting us directly at (914)712-8172</h3>
     <form id="quote-form" action="https://formsubmit.co/c811203dce3b9c7c017baad34286dbd4" method="POST">
       <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
-      <input type="email" name="email" placeholder="Email" required autocomplete="email">
-      <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel">
-      <textarea name="message" placeholder="Your message here..." required></textarea>
-      <button class="cta-button" type="submit">Send</button>
-
-      <input type="hidden" name="_subject" value="New Quote Request from Website">
-      <input type="hidden" name="_next" value="https://villawindowwashing.com/thank-you.html">
-      <input type="hidden" name="_captcha" value="false">
-    </form>
-    </form>
+            
+            <input type="email" name="email" placeholder="Email" required autocomplete="email">
+            
+            <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel">
+          
+            <input type="text" name="address" placeholder="Property Address (Street, City, Zip)" required>
+          
+            <select name="property_type" required>
+              <option value="">Type of Property</option>
+              <option value="House">House</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Business">Business</option>
+              <option value="Other">Other</option>
+            </select>
+          
+            <input type="number" name="stories" placeholder="Number of Stories (1, 2, 3...)" min="1" max="10">
+          
+            <textarea name="windows" placeholder="Approx. number of windows and if you'd like inside, outside, or both cleaned" rows="3" required></textarea>
+          
+            <textarea name="extras" placeholder="Do you have any screens, storm windows, or hard-to-reach areas?" rows="2"></textarea>
+          
+            <textarea name="additional_services" placeholder="Any other services? (e.g. tracks, gutters, screen cleaning)" rows="2"></textarea>
+          
+            <textarea name="scheduling_notes" placeholder="Any special notes about access, timing, or preferences?" rows="2"></textarea>
+          
+            <button class="cta-button" type="submit">Send</button>
+          
+            <!-- FormSubmit hidden settings -->
+            <input type="hidden" name="_subject" value="New Quote Request from Website">
+            <input type="hidden" name="_next" value="https://villawindowwashing.com/thank-you.html">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+          
   </section>
 
   
