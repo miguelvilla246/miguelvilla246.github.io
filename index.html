@@ -212,7 +212,7 @@
   transform: scale(1.03);
 }
 
-    .mySwiper {
+.mySwiper {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
@@ -505,7 +505,7 @@ footer {
   
   <section id="gallery" class="section" data-aos="fade-up">
     <h2>Gallery</h2>
-  <div class="swiper mySwiper">
+    <div class="swiper mySwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide"><img src="before.jpg" alt="Before Example 1"></div>
     <div class="swiper-slide"><img src="after.jpg" alt="After Example"></div>
@@ -545,12 +545,11 @@ footer {
       </div>
     
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-<script>
-  AOS.init();
-</script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -574,7 +573,6 @@ footer {
 
   
 </script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 </body>
 </html>
