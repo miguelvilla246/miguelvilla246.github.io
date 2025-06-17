@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -215,6 +218,35 @@
   transform: scale(1.03);
 }
 
+    .mySwiper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mySwiper img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* or adjust as needed */
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.swiper-slide {
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+    
 
 
     #about h2 {
@@ -522,6 +554,26 @@ footer {
 <script>
   AOS.init();
 </script>
-
+<script>
+    var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 2,      // Show partial next slide (peek effect)
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,           // 5-second auto-slide
+      speed: 800,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+</script>
 </body>
 </html>
