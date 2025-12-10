@@ -6,17 +6,14 @@
 
   <title>Villa Window Washing | East Haven Window Cleaning Services</title>
 
-  <!-- SEO Meta Tags -->
   <meta name="description" content="Professional window cleaning in Southern Connecticut — serving East Haven, New Haven, Branford, Guilford & nearby towns. Free quotes!" />
-  <meta name="keywords" content="window cleaning, Connecticut, New Haven, Fairfield CT, Clinton CT, Guilford CT, East Haven CT, window washing, Villa Window Washing, residential window cleaning, commercial window washing, villa window cleaning, commercial window cleaning" />
+  <meta name="keywords" content="window cleaning, Connecticut, New Haven, Fairfield CT, Clinton CT, Guilford CT, East Haven CT, window washing, Villa Window Washing, residential window cleaning, commercial window washing" />
   <meta name="author" content="Villa Window Washing LLC" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.villawindowwashing.com/" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://villawindowwashing.com/bucket3.png">
 
-  <!-- Open Graph Meta Tags (for social sharing) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Villa Window Washing" />
   <meta property="og:description" content="Crystal-clear window cleaning for homes and businesses in Connecticut, satisfaction guaranteed." />
@@ -24,579 +21,583 @@
   <meta property="og:url" content="https://villawindowwashing.com" />
   <meta property="og:site_name" content="Villa Window Washing" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lobster&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
-
-    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   
-  <!-- AOS Library -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<link rel="icon" type="image/png" href="bucket3.png">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
-
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Lobster', cursive;
-      background-color: #fdf6e3;
-      color: #4e3629;
+<style>
+    /* --- GLOBAL VARIABLES & RESET --- */
+    :root {
+      /* Your Retro Color Palette */
+      --color-primary: #e16860;    /* Coral */
+      --color-primary-dark: #c9554d; 
+      --color-secondary: #ffe4b5;  /* Peach */
+      --color-bg: #fffbf2;         /* Warm Cream/Off-White */
+      --color-surface: #ffffff;    /* Pure White for cards */
+      --color-text-main: #4e3629;  /* Dark Brown */
+      --color-text-light: #7a6256; /* Lighter Brown for secondary text */
+      
+      /* Modern Sizing & Spacing */
+      --radius: 8px;
+      --shadow-soft: 0 10px 30px -10px rgba(78, 54, 41, 0.1);
+      --shadow-hover: 0 15px 35px -10px rgba(78, 54, 41, 0.15);
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif; /* Clean, modern body font */
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+      line-height: 1.6;
+      font-size: 16px; /* Standard web readable size */
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif; /* Clean geometric headers */
+      color: var(--color-text-main);
+      font-weight: 600;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+
+    /* Keep Lobster ONLY for specific brand elements if desired */
+    .brand-font {
+      font-family: 'Lobster', cursive;
+    }
+
+    p {
+      color: var(--color-text-light);
+      margin-bottom: 1rem;
+    }
+
+    /* --- HEADER & NAV --- */
     header {
-      background-color: #ffe4b5;
+      background-color: var(--color-secondary);
       position: sticky;
       top: 0;
       z-index: 1000;
-      padding: 15px 0;
-      text-align: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo-container img {
+      height: 85px;
+      width: auto;
     }
 
     nav ul {
       list-style: none;
       padding: 0;
       display: flex;
-      justify-content: center;
-      gap: 40px;
+      gap: 30px;
+      margin: 0;
     }
 
     nav a {
       text-decoration: none;
-      color: #4e3629;
-      font-weight: bold;
-      font-size: 1.2em;
+      color: var(--color-text-main);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
     }
 
+    nav a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Mobile Nav Handling */
+    @media (max-width: 768px) {
+        header { flex-direction: column; height: auto; padding: 15px 0; }
+        nav ul { margin-top: 15px; gap: 15px; flex-wrap: wrap; justify-content: center; }
+    }
+
+    /* --- HERO SECTION --- */
     #hero {
-      background-color: #e16860;
+      background-color: var(--color-primary);
+      /* Subtle gradient for depth, not texture */
+      background: linear-gradient(135deg, #e16860 0%, #ef857d 100%);
       text-align: center;
       padding: 100px 20px;
       color: white;
     }
 
     #hero h1 {
-      font-size: 4em;
-      margin: 0;
+      font-size: 4rem; /* Reduced from 4.5em */
+      margin-bottom: 15px;
+      color: white;
       text-shadow: 2px 2px 0 #4e3629;
+
     }
 
     #hero p {
-      font-size: 2em;
-      margin-top: 10px;
-    }
-
-    .cta-button {
-      background-color: #ffe4b5;
-      color: #4e3629;
-      padding: 12px 25px;
-      font-size: 1.1em;
-      border: none;
-      border-radius: 8px;
-      margin-top: 25px;
-      cursor: pointer;
+      font-size: 1.8rem;
+      color: rgba(255,255,255, 0.95);
+      font-weight: 400;
       font-family: 'Lobster', cursive;
+      text-shadow: 1.5px 1.5px 0 #4e3629;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
     }
 
+    /* --- BUTTONS --- */
+    .cta-button {
+      background-color: var(--color-secondary);
+      color: var(--color-text-main);
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px; /* Pill shape is very modern */
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      background-color: #fff;
+    }
+
+    /* --- SECTIONS --- */
     .section {
-      padding: 60px 20px;
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
       text-align: center;
+      margin-bottom: 50px;
     }
 
     .section h2 {
-      font-size: 2.5em;
-      margin-bottom: 30px;
+      font-size: 2.2rem; /* Reduced from 3em */
+      margin-bottom: 10px;
+    }
+    
+    .section-subtitle {
+        color: var(--color-primary);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
     }
 
+    /* --- SERVICES --- */
     .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 30px;
     }
 
     .service-box {
-      background-color: #fff;
-      border: 2px solid #e16860;
-      padding: 25px;
-      border-radius: 10px;
-      width: 250px;
+      background-color: var(--color-surface);
+      padding: 30px 20px;
+      border-radius: var(--radius);
+      text-align: center;
+      font-weight: 600;
+      color: var(--color-text-main);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid rgba(0,0,0,0.03);
     }
 
-    #testimonials blockquote {
-      font-style: italic;
-      font-size: 1.2em;
-      margin: 20px auto;
-      max-width: 600px;
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* --- LOCATIONS --- */
+    #locations {
+      background-color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .locations-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .location-tag {
+        background-color: var(--color-bg);
+        border: 1px solid #e0d0c0;
+        padding: 10px 20px;
+        border-radius: 50px;
+        color: var(--color-text-main);
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    /* --- TESTIMONIALS --- */
+    .testimonial-card {
+      background: var(--color-surface);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      text-align: center;
     }
     
-    #services,
-    #about
-      {
-      scroll-margin-top: 100px; /* Adjust value based on your header height */
-    }
-    #quote
-      {
-      scroll-margin-top: 200px;
+    .testimonial-text {
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--color-text-main);
+        margin-bottom: 15px;
     }
     
+    .testimonial-author {
+        font-weight: 700;
+        color: var(--color-primary);
+        font-size: 0.9rem;
+    }
+
+    /* --- GALLERY --- */
     #gallery {
-     scroll-margin-top: 200px;
+        background-color: var(--color-bg);
+    }
+    
+    .mySwiper {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+    
+    .swiper-slide img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* --- QUOTE FORM --- */
+    #quote {
+        background-color: var(--color-surface);
+        border-radius: 16px;
+        box-shadow: var(--shadow-soft);
+        padding: 50px 40px;
+        margin: 60px auto;
+        max-width: 800px;
+        border-top: 6px solid var(--color-primary);
+    }
+
+    #quote-form label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--color-text-main);
     }
 
     #quote-form input,
     #quote-form select,
     #quote-form textarea {
-        display: block;
-        width: 90%;
-        max-width: 500px;
-        margin: 10px auto;
-        padding: 10px 12px;
-        font-size: 1em;
-        font-family: 'Lobster', cursive;
-        color: #4e3629;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        background-color: #fff;
-        box-sizing: border-box;
-      }
-
-  #quote-form select {
-        appearance: none;
-        background-image: url('data:image/svg+xml;utf8,<svg fill="black" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 140,0 70,80" /></svg>');
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-        background-size: 12px;
-        padding-right: 30px;
-      }
-
-#quote-form textarea {
-  resize: vertical;
-  min-height: 60px;
-}
-
-#quote-form button.cta-button {
-  margin-top: 20px;
-}
-
-  
-
-    #quote h3 {
-        font-size: 1.5em;
-        margin: 0;
-    }
-
-        #gallery {
-  background-color: #fffdf9;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.03);
-}
-
-.mySwiper {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.mySwiper img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 500px; /* or adjust as needed */
-  margin: 0 auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.swiper-slide {
-  opacity: 0.5;
-  transform: scale(0.9);
-  transition: opacity 0.3s ease;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-    
-
-
-    #about h2 {
-      font-size: 2em;
-      font-weight: bold;
+      width: 100%;
+      padding: 12px 15px;
       margin-bottom: 20px;
-      color: #4e3629;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--color-text-main);
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background-color: #fafafa;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
     }
 
-  #about p {
-      font-size: 1.2em;
-      line-height: 1.8;
-      text-align: justify;
-      margin: 12px auto;
-      max-width: 700px;
-      color: #4e3629;
+    #quote-form input:focus,
+    #quote-form select:focus, 
+    #quote-form textarea:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        background-color: #fff;
+    }
+    
+    @media (min-width: 768px) {
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        .form-row .input-group {
+            flex: 1;
+        }
     }
 
+    /* --- ABOUT --- */
+    #about {
+        text-align: center;
+    }
+    #about p {
+        max-width: 700px;
+        margin: 0 auto 20px auto;
+        text-align: center; /* Changed from justify for better web readability */
+    }
 
+    /* --- FOOTER --- */
     footer {
-      background-color: #e16860;
+      background-color: var(--color-primary);
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 40px 20px;
     }
-    #locations {
-  padding: 60px 20px;
-  background-color: #fff9f0;
-  text-align: center;
-  color: #4e3629;
-}
+    
+    footer p {
+        color: rgba(255,255,255,0.9);
+        font-size: 0.9rem;
+    }
+    
+    footer a {
+        color: white;
+        text-decoration: underline;
+    }
 
-    #locations h2 {
-    font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #4e3629;
-}
+    .socials img {
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      filter: brightness(0) invert(1); /* Make icons pure white */
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    
+    .socials img:hover {
+        opacity: 1;
+    }
 
-#locations p {
-  font-size: 1.4em;
-  line-height: 1.6;
-  margin: 10px auto;
-  max-width: 700px;
-  text-align: justify;
-}
+    /* --- SCROLL OFFSET FIX --- */
+    #services, #about, #quote, #gallery {
+      scroll-margin-top: 100px;
+    }
 
-#locations ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
-  max-width: 700px;
-  font-size: 1.2em;
-  line-height: 1.6;
-  text-align: left;
-}
-
-#locations ul li::before {
-  content: "• ";
-  color: #e16860;
-  font-weight: bold;
-}
-#services {
-  background-color: #fff3e6;  /* darker beige */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-#locations {
-  background-color: #fffdf9;  /* lighter */
-}
-
-#testimonials {
-  background-color: #ffe8dc;  /* slightly darker peach tone */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-
-}
-
-#quote {
-  background-color: #ffffff;  /* white */
-}
-
-#about {
-  background-color: #fff0eadc;  /* soft coral-tinted light */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-
-}
-
-footer {
-  background-color: #e16860;  /* bold coral */
-  color: white;
-}
-
-.section {
-  border-top: 2px solid #f2c0b7;
-
-}
-    .socials {
-  margin-top: 15px;
-}
-
-.socials a {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.socials img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.2s ease;
-}
-
-.socials img:hover {
-  transform: scale(1.2);
-}
-
-#about p,
-#services p,
-#locations p,
-#testimonials blockquote
- {
-  font-family: 'Edu TAS Beginner', cursive;
-  font-size: 1.35em;
-  line-height: 1.9;
-  color: #4e3629;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-#locations li
-{
-  font-family: 'Edu TAS Beginner', cursive;
-  font-size: 1.05em;
-  line-height: 1.9;
-  color: #4e3629;
-  text-align: justify;
-  margin-bottom: 15px;
-}
-
-
+    /* --- MOBILE ADJUSTMENTS --- */
     @media (max-width: 768px) {
-      #hero h1 {
-        font-size: 2.5em;
-      }
-      #hero p {
-      font-size: 1.1em;
-      }
-
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
+      #hero h1 { font-size: 2.2rem; }
+      .section h2 { font-size: 1.8rem; }
+      #quote { padding: 30px 20px; }
     }
-      #quote h3 {
-        font-size: 1.3em;
-      }
-    html {
-      scroll-behavior: smooth;
-    }
-  @media (max-width: 768px) {
-    #services,
-    #quote,
-    #about
-    {
-      scroll-margin-top: 250px;
-    }
-  }
-
-
-  </style>
-</head>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Villa Window Washing LLC",
-  "url": "https://villawindowwashing.com",
-  "logo": "https://villawindowwashing.com/bucket3.png"
-}
-</script>
+</style>
 
 <body>
-  <header>
-    <img src="bucket3.png" alt="Villa Window Washing logo; trusted window cleaner in all Southern CT" style="height: 100px;">
+
+<header>
+    <div class="logo-container">
+        <a href="#"><img src="bucket3.png" alt="Villa Window Washing logo"></a>
+    </div>
     <nav>
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#quote">Get a Quote</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#quote" style="color: var(--color-primary); font-weight: 600;">Get Quote</a></li>
       </ul>
     </nav>
-  </header>
+</header>
 
-  <section id="hero" data-aos="fade-up">
-    <h1>Villa Window Washing</h1>
-    <p>Your pane is our passion</p>
+<section id="hero" data-aos="fade-in">
+    <h1 class="brand-font">Villa Window Washing</h1>
+    <p> Your pane is our passion</p>
     <a href="#quote" class="cta-button">Get a Free Quote</a>
-  </section>
+</section>
 
-  <section id="services" class="section" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-box">Residential Window Cleaning</div>
-      <div class="service-box">Commercial Window Cleaning</div>
-      <div class="service-box">Screen & Track Cleaning</div>
-      <div class="service-box">Solar Panel Cleaning</div>
-      <div class="service-box">Soft Washing</div>
-
-    </div>
-  </section>
-
-  <section id="locations" data-aos="fade-up">
-    <h2>Where We Serve</h2>
-    <p><strong>We’re based in East Haven, CT — and proudly serve homes and businesses in, but not limited to:</strong></p>
-    <p></p>
-    <ul style="list-style: none; padding: 0; font-size: 1.2em;">
-      <li>• New Haven County</li>
-      <li>• Fairfield County</li>
-      <li>• Middlesex County</li>
-      <li>• New London County</li>
-    </ul>
-    <p style="text-align: center; font-weight: bold; font-size: 1.3em; margin-top: 20px;">
-        We've got you covered!
-      </p>
-  </section>
-  
-
-  <section id="testimonials" class="section" data-aos="fade-up">
-    <h2>What Our Customers Say</h2>
-    <blockquote>
-      “Great window washing experience!! Friendly, fast, and detailed. My home windows were left so clear, I will definitely be calling Villa Window Washing back.”<br>
-      <strong>– Abigail Quintanilla</strong>
-    </blockquote>
-    <blockquote>
-      “I had an excellent experience with Villa Window Washing! Miguel cleaned my windows quickly and thoroughly, all at a very affordable price...”<br>
-      <strong>– Parada Coffee Co.</strong>
-    </blockquote>
-    <a href="https://www.google.com/maps/place/Villa+Window+Washing+LLC/@41.4998729,-73.416877,203347m/data=!3m1!1e3!4m16!1m9!3m8!1s0xaaefccac3e8a5413:0x4b70f8e5b8cc8517!2sVilla+Window+Washing+LLC!8m2!3d41.500727!4d-72.757507!9m1!1b1!16s%2Fg%2F11xctld9f6!3m5!1s0xaaefccac3e8a5413:0x4b70f8e5b8cc8517!8m2!3d41.500727!4d-72.757507!16s%2Fg%2F11xctld9f6?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="cta-button">Read All Google Reviews</a>
-  </section>
-  </section>
-
-  <section id="quote" class="section" data-aos="fade-up">
-    <h2>Request a Free Quote</h2>
-    <h3>By completing the form</h3>
-    <h3>or</h3>
-    <h3>Contacting us directly at (914)712-8172</h3>
-    <form id="quote-form" action="https://formsubmit.co/c811203dce3b9c7c017baad34286dbd4" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
-            
-            <input type="email" name="email" placeholder="Email" required autocomplete="email">
-            
-            <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel">
-          
-            <input type="text" name="address" placeholder="Property Address (Street, City, Zip)" required>
-          
-            <select name="property_type" required>
-              <option value="">Type of Property</option>
-              <option value="House">House</option>
-              <option value="Apartment">Apartment</option>
-              <option value="Business">Business</option>
-              <option value="Other">Other</option>
-            </select>
-          
-            <input type="number" name="stories" placeholder="Number of Stories (1, 2, 3...)" min="1" max="10">
-          
-            <textarea name="windows" placeholder="Approx. number of windows and if you'd like inside, outside, or both cleaned" rows="3" required></textarea>
-          
-            <textarea name="extras" placeholder="Do you have any screens, storm windows, or hard-to-reach areas?" rows="2"></textarea>
-          
-            <textarea name="additional_services" placeholder="Any other services? (e.g. tracks, gutters, screen cleaning)" rows="2"></textarea>
-          
-            <textarea name="scheduling_notes" placeholder="Any special notes about access, timing, or preferences?" rows="2"></textarea>
-                    
-            <!-- FormSubmit hidden settings -->
-            <input type="hidden" name="_subject" value="New Quote Request from Website">
-            <input type="hidden" name="_next" value="https://villawindowwashing.com/thank-you.html">
-            <input type="hidden" name="_captcha" value="false">
-            <button type="submit" class="cta-button">Send</button>
-
-          </form>
-          
-  </section>
-
-  
-  <section id="gallery" class="section" data-aos="fade-up">
-    <h2>Gallery</h2>
-    <div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="before.jpg" alt="Before window cleaning;dirt and streaks on glass"></div>
-    <div class="swiper-slide"><img src="after.jpg" alt="After window cleaning, crystal clear glass finish in CT home"></div>
-    <div class="swiper-slide"><img src="Hose.jpg" alt="Water fed pole system used by Villa Window Washing"></div>
-    <div class="swiper-slide"><img src="Screen.jpg" alt="Screen cleaning service by Villa Window Washing in beautiful home"></div>
+<section id="services" class="section" data-aos="fade-up">
+  <div class="section-header">
+      <div class="section-subtitle">What We Do</div>
+      <h2>Our Services</h2>
   </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
-</div>
-  </section>
+  <div class="services">
+    <div class="service-box">Residential Window Cleaning</div>
+    <div class="service-box">Commercial Window Cleaning</div>
+    <div class="service-box">Screen & Track Cleaning</div>
+    <div class="service-box">Solar Panel Cleaning</div>
+  </div>
+</section>
+
+<section id="locations" data-aos="fade-up">
+  <div class="section-header">
+      <div class="section-subtitle">Service Area</div>
+      <h2>Where We Serve</h2>
+  </div>
+  <p>We are based in East Haven, CT and proudly serve homes and businesses across:</p>
   
+  <div class="locations-grid">
+    <span class="location-tag">New Haven County</span>
+    <span class="location-tag">Fairfield County</span>
+    <span class="location-tag">Middlesex County</span>
+    <span class="location-tag">New London County</span>
+  </div>
+</section>
 
-  <section id="about" class="section" data-aos="fade-up">
-    <h2>About Us</h2>
-    <p style="max-width: 700px; margin: 0 auto; text-align: justify;">
-        <p> As a small family owned and operated window cleaning company we value each one of our customers. Our approach is to work as if it were for our family at our own home. </p>
+<section id="testimonials" class="section" data-aos="fade-up">
+  <div class="section-header">
+      <div class="section-subtitle">Reviews</div>
+      <h2>What Our Customers Say</h2>
+  </div>
+  
+  <div class="testimonial-card">
+    <div class="testimonial-text">
+      “Great window washing experience!! Friendly, fast, and detailed. My home windows were left so clear, I will definitely be calling Villa Window Washing back.”
+    </div>
+    <div class="testimonial-author">– Abigail Quintanilla</div>
+  </div>
 
-        <p>We are committed to offer the best service, and experience with a personal touch. </p>
-        
-        <p>All the products we use do not harm the environment, and are not bad for your health. We believe in taking care of our customers in the best way possible while taking care of the environment.</p> 
-          
-        <p>We hope you’ll find what you’re looking for. For more information or general inquiries, feel free to get in touch today.</p>
-        <p> <a href= "mailto:info@villawindowwashing.com">info@villawindowwashing.com</a></p>
-  </section>
+  <div class="testimonial-card">
+    <div class="testimonial-text">
+      “I had an excellent experience with Villa Window Washing! Miguel cleaned my windows quickly and thoroughly, all at a very affordable price...”
+    </div>
+    <div class="testimonial-author">– Parada Coffee Co.</div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="https://www.google.com/maps/place/Villa+Window+Washing+LLC/@41.4998729,-73.416877,203347m/data=!3m1!1e3!4m16!1m9!3m8!1s0xaaefccac3e8a5413:0x4b70f8e5b8cc8517!2sVilla+Window+Washing+LLC!8m2!3d41.500727!4d-72.757507!9m1!1b1!16s%2Fg%2F11xctld9f6!3m5!1s0xaaefccac3e8a5413:0x4b70f8e5b8cc8517!8m2!3d41.500727!4d-72.757507!16s%2Fg%2F11xctld9f6?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="cta-button">Read All Google Reviews</a>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Villa Window Washing LLC | East Haven, CT | info@villawindowwashing.com</p>
+<section id="gallery" class="section" data-aos="fade-up">
+  <div class="section-header">
+      <h2>Recent Work</h2>
+  </div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="before.jpg" alt="Dirty windows before cleaning"></div>
+      <div class="swiper-slide"><img src="after.jpg" alt="Crystal clear windows after cleaning"></div>
+      <div class="swiper-slide"><img src="Hose.jpg" alt="Water fed pole system equipment"></div>
+      <div class="swiper-slide"><img src="Screen.jpg" alt="Screen cleaning service"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<section id="quote" data-aos="fade-up">
+  <div class="section-header">
+      <div class="section-subtitle">Contact Us</div>
+      <h2>Request a Free Quote</h2>
+      <p>Fill out the form below or call/text <strong>(914) 712-8172</strong></p>
+  </div>
+  
+  <form id="quote-form" action="https://formsubmit.co/c811203dce3b9c7c017baad34286dbd4" method="POST">
     
-    <div class="socials">
-        <a href="https://www.instagram.com/villawindowwashing" target="_blank" aria-label="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
-        </a>
-        <a href="https://www.tiktok.com/@villawindowwashing" target="_blank" aria-label="TikTok">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" />
-        </a>
-      </div>
+    <div class="form-row">
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="John Doe" required autocomplete="name">
+        </div>
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="john@example.com" required autocomplete="email">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="(555) 123-4567" required autocomplete="tel">
+        </div>
+        <div class="input-group">
+            <label>Property Type</label>
+            <select name="property_type" required>
+                <option value="">Select Type</option>
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Business">Business</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
+
+    <label>Property Address</label>
+    <input type="text" name="address" placeholder="Street, City, Zip Code" required>
     
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <div class="form-row">
+        <div class="input-group">
+             <label>Stories</label>
+             <input type="number" name="stories" placeholder="e.g. 2" min="1" max="10">
+        </div>
+        <div class="input-group">
+             <label>Window Estimate</label>
+             <input type="text" name="windows_est" placeholder="Approx number of windows">
+        </div>
+    </div>
+
+    <label>Project Details</label>
+    <textarea name="details" placeholder="Do you need inside, outside, or both? Are there screens or storm windows?" rows="4" required></textarea>
+            
+    <input type="hidden" name="_subject" value="New Quote Request from Website">
+    <input type="hidden" name="_next" value="https://villawindowwashing.com/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <button type="submit" class="cta-button" style="width: 100%; margin-top: 10px;">Send Request</button>
+  </form>
+</section>
+
+<section id="about" class="section" data-aos="fade-up">
+  <div class="section-header">
+      <h2>About Us</h2>
+  </div>
+  <p>As a small family-owned and operated window cleaning company, we value each one of our customers. Our approach is to work as if it were for our family at our own home.</p>
+
+  <p>We are committed to offering the best service and experience with a personal touch. All the products we use are eco-friendly and safe. We believe in taking care of our customers in the best way possible while taking care of the environment.</p> 
+  
+  <p style="margin-top: 20px;">
+      <a href="mailto:info@villawindowwashing.com" style="color: var(--color-primary); font-weight: 600; text-decoration: none;">info@villawindowwashing.com</a>
+  </p>
+</section>
+
+<footer>
+  <div class="socials">
+    <a href="https://www.instagram.com/villawindowwashing" target="_blank" aria-label="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
+    </a>
+    <a href="https://www.tiktok.com/@villawindowwashing" target="_blank" aria-label="TikTok">
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" />
+    </a>
+  </div>
+  <p>© 2025 Villa Window Washing LLC | East Haven, CT</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
 <script>
-    var swiper = new Swiper(".mySwiper", {
+  AOS.init({ duration: 800, once: true });
+
+  var swiper = new Swiper(".mySwiper", {
     loop: true,
-    spaceBetween: 30,
-    slidesPerView: 2,      // Show partial next slide (peek effect)
+    spaceBetween: 20,
     centeredSlides: true,
     autoplay: {
-      delay: 5000,           // 5-second auto-slide
-      speed: 800,
+      delay: 5000,
       disableOnInteraction: false
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+    breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 15 },
+        768: { slidesPerView: 2, spaceBetween: 30 }
     }
   });
-
-  
 </script>
 
 </body>
