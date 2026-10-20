@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /thank-you.html
 Allow: /
 
 Sitemap: https://www.villawindowwashing.com/sitemap.xml
